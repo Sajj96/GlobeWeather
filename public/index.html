@@ -6,6 +6,7 @@
     <title>GlobeWeather</title>
     <meta name="msapplication-TileColor" content="#02b3e4">
     <meta name="description" content="GlobeWeather App">
+    <meta name="theme-color" content="#02b3e4" />
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -14,7 +15,6 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="manifest" href="manifest.json">
-
 </head>
 <body>
     <header class="main-header">
@@ -29,22 +29,27 @@
     <main>
         <section>
             <div class="container main-container">
-                <div class="col-lg-6 main-section">
+                <div class="col-lg-6 col-sm-12 main-section">
                     <div class="card">
                         <div class="card-body">
                               <!-- Actual search box -->
-                            <form action="">
+                            <form id="searchForm" name="searchForm" action="" method="GET">
                                 <div class="form-group has-search">
-                                    <input type="text" class="form-control searchbar" placeholder="Search...">
+                                    <input type="text" id="search" name="search" class="form-control searchbar" placeholder="Search...">
                                 </div>
                             </form>
                             <h4 class="card-title" id="title"></h4>
-                            <div class="d-flex align-items-center flex-row m-t-30">
-                                <div class="display-5 text-info temp"><i id="wind-icon"></i> <span id="degree"></span><sup>°</sup></div>
-                                <div class="m-l-10">
-                                    <small id="descript"></small>
-                                    <h3 class="m-b-0" id="day"></h3>
-                                    <h6 id="date"></h6>
+                            <div class="d-flex align-items-center row m-t-30">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="display-5 text-info temp"><i id="wind-icon"><img src="" id="image-1" alt="image1"></i> 
+                                        <span id="degree"></span><sup>°</sup></div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="m-l-10">
+                                        <small id="descript"></small>
+                                        <h3 class="m-b-0" id="day"></h3>
+                                        <h6 id="date"></h6>
+                                    </div>
                                 </div>
                             </div>
                             <table class="table no-border mini-table m-t-20">
@@ -73,29 +78,28 @@
                             </table>
                             <ul class="row list-style-none text-center m-t-30">
                                 <li class="col-3">
-                                    <h4 class="text-info"><i id="wi-1"></i></h4>
+                                    <h4 class="text-info"><i id="wi-1"><img src="" id="image-2" alt="image2"></i></h4>
                                     <span class="d-block text-muted" id="time1"></span>
                                     <h3 class="m-t-5"><span id="time-1-degree"></span><sup>°</sup></h3>
                                 </li>
                                 <li class="col-3">
-                                    <h4 class="text-info"><i id="wi-2"></i></h4>
+                                    <h4 class="text-info"><i id="wi-2"><img src="" id="image-3" alt="image3"></i></h4>
                                     <span class="d-block text-muted" id="time2"></span>
                                     <h3 class="m-t-5"><span id="time-2-degree"></span><sup>°</sup></h3>
                                 </li>
                                 <li class="col-3">
-                                    <h4 class="text-info"><i id="wi-3"></i></h4>
+                                    <h4 class="text-info"><i id="wi-3"><img src="" id="image-4" alt="image4"></i></h4>
                                     <span class="d-block text-muted" id="time3"></span>
                                     <h3 class="m-t-5"><span id="time-3-degree"></span><sup>°</sup></h3>
                                 </li>
                                 <li class="col-3">
-                                    <h4 class="text-info"><i id="wi-4"></i></h4>
+                                    <h4 class="text-info"><i id="wi-4"><img src="" id="image-5" alt="image5"></i></h4>
                                     <span class="d-block text-muted" id="time4"></span>
                                     <h3 class="m-t-5"><span id="time-4-degree"></span><sup>°</sup></h3>
                                 </li>
                             </ul>
                         </div>
                     </div>
-
                 </div> 
             </div>
         </section>
@@ -105,7 +109,6 @@
         <a href="https://www.github.com/Sajj96">Sajjad Abubakari</a>.
     </footer>
     
-    <script src="assets/js/all.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>

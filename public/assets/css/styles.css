@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   color: #374767;
-  background-color: #ffffff;
+  background: #ffffff !important;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -63,7 +63,6 @@ body {
   border-radius: 30px;
   padding: 10px;
 }
-
 
 .has-search .form-control {
   padding-left: 2.375rem;
@@ -224,7 +223,24 @@ a.text-info:hover {
   z-index: 820;
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+  .main-container{
+    background: #058fb6;
+  }
+
+  .card {
+    position: relative;
+    min-width: 100%;
+    border: none !important;
+  }
+
+  .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0 !important;
+  }
+
   #wind-icon img{
       width: 80px;
       height: 80px;
@@ -236,7 +252,7 @@ a.text-info:hover {
   .font-medium,
   .m-t-5 {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
   }
 
 }

@@ -15,7 +15,7 @@
     ],
     "theme_color": "#02b3e4",
     "background_color": "#02b3e4",
-    "start_url": "/GlobeWeather/index.html",
+    "start_url": "/GlobeWeather/public/index.html",
     "scope": "/",
     "orientation": "any",
     "display": "standalone",
@@ -24,6 +24,6 @@
     "description": "Weather Application",
     "serviceworker": {
         "src": "sw.js",
-        "scope": "./"
+        "scope": "/"
     }
 }
